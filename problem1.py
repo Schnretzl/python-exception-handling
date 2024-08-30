@@ -9,6 +9,8 @@ def convert_temperature():
         temperature = float(input("Enter temperature in Fahrenheit: "))
     except ValueError:
         print("Invalid entry.  Input must be a number.")
+    except Exception as e:
+        print(f"An error occurred: {e}.")
     else:
         celsius = (temperature - 32) * 5.0 / 9.0
         print(f"Temperature in celsius: {celsius:.2f}°C")
